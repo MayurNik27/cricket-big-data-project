@@ -49,6 +49,7 @@ for match in matches:
 
     silver_rows.append({
         "match_id":match.get("id"),
+        "match_type":match.get("matchType"),
         "match_name":match.get("name"),
         "status":match.get("status"),
         "venue":match.get("venue"),
@@ -71,6 +72,7 @@ print("Silver layers rows prepared",len(silver_rows))
 
 silver_schema = StructType([
     StructField("match_id", StringType(), True),
+    StructField("match_type", StringType(), True),
     StructField("match_name", StringType(), True),
     StructField("status", StringType(), True),
     StructField("venue", StringType(), True),
